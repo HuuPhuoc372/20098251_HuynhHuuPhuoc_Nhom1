@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px auto;
+        }
+        body{
+            background-image: url(../img/background.jpg);
+        }
+        .wrapper{
+            height: 800px;
+            width: 1089px;
+            background-color: antiquewhite;
+        }
+        nav{
+            height: 50px;
+            width: 1089px;
+            background-color: rgb(92, 238, 194);
+            line-height: 50px;
+        }
+        header{
+            height: 150px;
+            width: 1089px;
+            background-color: rgb(240, 154, 248);
+            background-image: url(../img/header.jpg);
+            text-align: center;
+            color: rgb(232, 241, 103);
+            font-size: 100px;
+            line-height: 150px;
+        }
+        .content{
+            height: 800px;
+            width: 1089px;
+            background-color: rgb(235, 196, 146);
+        }
+        aside{
+            height: 400px;
+            width: 400px;
+            background-color: rgb(151, 121, 235);
+            float: left;
+        }
+        section{
+            height: 400px;
+            width: 689px;
+            background-color: rgb(228, 151, 161);
+            float: left;
+        }
+        .menu li{
+            float: left;
+            height: 50px;
+            width: 150px;
+            line-height: 50px;
+            text-indent: 20px;
+            background-color: beige;
+            list-style: none;
+        }
+        .menu li .submenu{
+            display: none;
+            position: absolute;
+        }
+        .menu li:hover{
+            background-color: rgb(108, 165, 165);
+        }
+        .menu li:hover .submenu{
+            display: block;
+        }
+        li:hover>a{
+            color: blueviolet;
+            font-style: italic;
+        }
+        a{
+            color: red;
+            font-weight: bold;
+            text-decoration: none;
+        }   
+        footer img.Center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="">HOME</a></li>
+                <li><a href="">CONTACT</a>
+                    <ul class="submenu">
+                        <li><a href="">Phone</a></li>
+                        <li><a href="">Email</a></li>
+                        <li><a href="">Facebook</a></li>
+                    </ul>
+                </li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+            <form action="dangky.php">
+                <label for="lblEmail">Email</label>
+                <input type="email" name="txtEmail" id="txtEmail" required placeholder="nhập email">
+                <input type="submit" value="GO" id="btnGO">
+            </form>
+        </nav>
+        <header>
+            Web của Phước
+        </header>
+        <div class="content">
+            <aside>
+                <article>
+                    <h5 style="position: absolute; color: antiquewhite;">Hoạt Động 1</h5>
+                    <img src="../img/h1.jpg" alt="" srcset="">
+                </article>
+                <article>
+                    <h5 style="position: absolute; color: antiquewhite;">Hoạt Động 2</h5>
+                    <img src="../img/h2.jpg" alt="" srcset="">
+                </article>
+                <article>
+                    <h5 style="position: absolute; color: antiquewhite;">Hoạt Động 3</h5>
+                    <img src="../img/h3.jpg" alt="" srcset="">
+                </article>
+            </aside>
+            <section>
+                <form action="dangky.php">
+                    <fieldset>Thông tin của bạn</fieldset>
+                    <label for="lblHoten">Họ tên: </label>
+                    <input type="text" name="txtHT" id="txtHT" required placeholder="Nhập họ tên"> <br>
+                    <label for="lblEmail">Email: </label>
+                    <input type="email" name="txtEmail" id="txtEmail" required placeholder="nhập email"><br>
+                    <label for="lblNS">Ngày sinh: </label>
+                    <input type="date" name="txtNS" id="txtNS" required placeholder="Nhập ngày sinh" pattern="dd/MM/yyyy"> <br>
+                    <label for="lblGT">Giới tính: </label>
+                    <input type="radio" name="radSex" id="radNam" value="nam" checked> <label for="lblNam">Nam</label>
+                    <input type="radio" name="radSex" id="radNu" value="nu" required> <label for="lblNu">Nu</label><br>
+                    <input type="submit" value="GO" id="btnGO">
+                </form>
+            </section>
+        </div>
+        <footer>
+            <img src="../img/IUH.jpg" alt="" srcset="" class="Center">
+        </footer>
+    </div>
+</body>
+</html>
